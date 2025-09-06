@@ -1,0 +1,40 @@
+.main {
+  width: 100vw;
+  background-color: rgb(54, 54, 54);
+}
+
+.box {
+  border: 1px solid grey;
+  padding: 1%;
+}
+
+.appbar {
+  background-color: #3e2244;
+  color: white;
+}
+
+.custom-container {
+  background-color: white;
+  height: 100vh;
+}
+
+.profile-pic {
+  height: auto;
+  max-width: 500px;
+}
+
+li:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.appbar-title {
+  margin-left: 1%;
+}
+
+.custom-card {
+  margin: 1%;
+  margin-bottom: 3%;
+  box-shadow: 0 0 10px #c0c0c0;
+  padding: 3%;
+}

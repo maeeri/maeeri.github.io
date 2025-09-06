@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="src/styles/app.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="src/js/script.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+</head>
+<body class="main">
+    <nav class="navbar appbar">
+      <h1 class="appbar-title">Mari-Anne Eerikäinen</h1>>
+    </nav>
+  <div class="container custom-container">
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <div class="card custom-card">
+            <h4>About Me</h4>
+            <div>
+              Hello! My name is Mari-Anne and I enjoy coding and problem-solving. My emphasis is strongly in backend work.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card custom-card" id="workdiv">
+            <h4>Work Experience</h4>
+            <ul id="worklist" class="list-group list-group-flush">
+            </ul>
+          </div>
+          <div class="card custom-card" id="studiesdiv">
+            <h4>Studies</h4>
+            <ul id="studieslist" class="list-group list-group-flush">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <img class="profile-pic" src="src/img/me.png" alt="portait of me">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<div class="modal" tabindex="-1" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+</html>
