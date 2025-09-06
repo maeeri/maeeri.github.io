@@ -1,0 +1,40 @@
+{
+	"studies": [
+		{
+		"id": 0,
+		"school": "Lapland University of Applied Sciences",
+		"course": "Bachelor of Engineering",
+		"ECTS": 170,
+		"begin": 2023,
+		"end": null
+		},{
+		"id": 1,
+		"school": "AW Academy",
+		"course": "C# Full Stack Developer",
+		"ECTS": null,
+		"begin": null,
+		"end": 2022
+		},{
+		"id": 2,
+		"school": "Helsinki University",
+		"course": "Full Stack Open",
+		"ECTS": 11,
+		"begin": 2022,
+		"end": null
+		},{
+		"id": 3,
+		"school": "Helsinki University",
+		"course": "Data Structures and Algorithms",
+		"ECTS": 10,
+		"begin": 2022,
+		"end": null
+		},{
+		"id": 4,
+		"school": "University of Tampere",
+		"course": "Bachelor of Arts, English language and Cultrure",
+		"ECTS": 180,
+		"begin": null,
+		"end": 2019
+		}
+	]
+} 

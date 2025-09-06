@@ -1,0 +1,45 @@
+{
+	"work": [
+		{ 
+			"id": 0,
+			"company": "Roima Intelligence Ltd",
+			"begin": 2023,
+			"end": null,
+			"title": "Software Developer",
+			"description": "I develop a .NET based procurement web app and an Apache Karaf based integration platform. Additionally, I provide support for and develop three customer application management systems dealing with manufacturing, reporting and logistics, respectively.",
+			"tech": [
+				".NET",
+				"C#",
+				"VB.NET",
+				"ASP.NET",
+				"Microsoft services",
+				"Azure",
+				"AWS",
+				"SQL Server",
+				"Informix",
+				"MySQL",
+				"Integrations",
+				"Apache Camel",
+				"XSLT",
+				"Apache Kafka",
+				"Microservice architecture",
+				"Data replication",
+				"Unit testing (Java)"
+			]
+			},{ 
+			"id": 1,
+			"company": "Academic Work",
+			"begin": 2022,
+			"end": 2023,
+			"title": "Junior IT Consultant",
+			"description": "",
+			"tech": [
+				"JavaScript",
+				"TypeScript",
+				"Python",
+				"Node.js",
+				"React.js"
+			]
+		}
+	]
+}
