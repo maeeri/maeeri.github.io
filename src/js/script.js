@@ -10,7 +10,8 @@ async function setData() {
   
   for (let i = 0; i < studies.length; i++) {
     let modalBody = createStudyModalBody(studies[i])
-    let li = createListElement(studies[i].school + ': ' + studies[i].course, studies[i].school, modalBody)    
+    let title = studies[i].school ? studies[i].school + ": " + studies[i].course : studies[i].course
+    let li = createListElement(title, studies[i].school, modalBody)    
     studieslist.appendChild(li)
   }
 
@@ -22,10 +23,6 @@ async function setData() {
     worklist.appendChild(li)
   }
 }
-
-setData().then(() => {
-  console.log('Data loaded')
-})
 
 function setModalContent(title, body) {
   document.getElementById('modal-title').innerText = title
@@ -51,58 +48,84 @@ function createListElement(listText, modalTitle, modalBody) {
 
 function createStudyModalBody(study) {
   let div = document.createElement('div')
-  let p1 = document.createElement('p')
-  p1.innerText = 'School: ' + study.school
-  let p2 = document.createElement('p')
-  div.appendChild(p1)
-  div.appendChild(p2)
+  let school = createElement('School: ', study.school ? study.school : 'N/A')
+  div.appendChild(school)
 
-  p2.innerText = 'Course: ' + study.course
+  let course = createElement('Course: ', study.course)
+  div.appendChild(course)
   if (study.begin) {
-    let p3 = document.createElement('p')
-    p3.innerText = 'Began: ' + study.begin
-    div.appendChild(p3)
+    let begin = createElement('Began: ', study.begin)
+    div.appendChild(begin)
   }
   if (study.end) {
-    let p4 = document.createElement('p')
-    p4.innerText = 'Graduated: ' + study.end
-    div.appendChild(p4)
+    let end = createElement('Finished: ', study.end)
+    div.appendChild(end)
   }
   if (study.ECTS) {
-    let p5 = document.createElement('p')
-    p5.innerText = 'ECTS: ' + study.ECTS
-    div.appendChild(p5)
+    let ects = createElement('ECTS: ', study.ECTS)
+    div.appendChild(ects)
+  }
+  if (study.website) {
+    let website = document.createElement('div')
+    let label = createLabel('Website: ')
+    let a = document.createElement('a')
+    a.href = study.website
+    a.target = '_blank'
+    a.rel = 'noopener noreferrer'
+    a.innerText = study.website
+    website.appendChild(label)
+    website.appendChild(a)
+    div.appendChild(website)
   }
   return div
 }
 
 createWorkModalBody = function (work) {
   let div = document.createElement('div')
-  let p1 = document.createElement('p')
-  p1.innerText = 'Company: ' + work.company
-  let p2 = document.createElement('p')
-  p2.innerText = 'Title: ' + work.title
-  div.appendChild(p1)
-  div.appendChild(p2)
+  let company = createElement('Company: ', work.company)
+  div.appendChild(company)
+  let title = createElement('Title: ', work.title)
+  div.appendChild(title)
   if (work.description) {
-    let p3 = document.createElement('p')
-    p3.innerText = 'Description: ' + work.description
-    div.appendChild(p3)
+    let description = createElement('Description: ', work.description)
+    div.appendChild(description)
   }
   if (work.begin) {
-    let p4 = document.createElement('p')
-    p4.innerText = 'Began: ' + work.begin
-    div.appendChild(p4)
+    let begin = createElement('Began: ', work.begin)
+    div.appendChild(begin)
   }
   if (work.end) {
-    let p5 = document.createElement('p')
-    p5.innerText = 'Ended: ' + work.end
-    div.appendChild(p5)
+    let end = createElement('Ended: ', work.end)
+    div.appendChild(end)
   }
   if (work.tech.length > 0) {
-    let p6 = document.createElement('p')
-    p6.innerText = 'Technologies: ' + work.tech.join(', ')
-    div.appendChild(p6)
+    let tech = createElement('Technologies: ', work.tech.join(', '))
+    div.appendChild(tech)
   }
   return div
 }
+
+function createLabel(text) {
+  let span = document.createElement('span')
+  span.className = 'label'
+  span.innerText = text
+  return span
+}
+
+function createContent(text) {
+  let span= document.createElement('span')
+  span.innerText = text
+  return span
+}
+
+function createElement(labelText, contentText) {
+  let div = document.createElement('div')
+  let label = createLabel(labelText)
+  let content = createContent(contentText)
+  div.appendChild(label)
+  div.appendChild(content)
+  div.className = 'mb-2'
+  return div
+}
+
+setData()

@@ -20,14 +20,14 @@
 		"course": "Full Stack Open",
 		"ECTS": 11,
 		"begin": 2022,
-		"end": null
+		"end": 2023
 		},{
 		"id": 3,
 		"school": "Helsinki University",
 		"course": "Data Structures and Algorithms",
 		"ECTS": 10,
 		"begin": 2022,
-		"end": null
+		"end": 2023
 		},{
 		"id": 4,
 		"school": "University of Tampere",
@@ -35,6 +35,14 @@
 		"ECTS": 180,
 		"begin": null,
 		"end": 2019
+		},{
+		"id": 5,
+		"school": null,
+		"course": "Tim Corey C# Mastercourse",
+		"ECTS": null,
+		"begin": null,
+		"end": 2024,
+		"website": "https://www.iamtimcorey.com/courses/csharp-mastercourse/"
 		}
 	]
 } 

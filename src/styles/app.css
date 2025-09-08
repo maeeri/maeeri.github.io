@@ -1,3 +1,7 @@
+.btn-close {
+  z-index: 999;
+}
+
 .main {
   width: 100vw;
   background-color: rgb(54, 54, 54);
@@ -37,4 +41,29 @@ li:hover {
   margin-bottom: 3%;
   box-shadow: 0 0 10px #c0c0c0;
   padding: 3%;
+}
+
+.label {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-pic {
+    margin: auto;
+  }
+
+  .custom-card {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+
+  .custom-container {
+    height: 100%;
+  }
 }
