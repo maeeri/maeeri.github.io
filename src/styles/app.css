@@ -19,7 +19,7 @@
 
 .custom-container {
   background-color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 .profile-pic {
@@ -41,6 +41,11 @@ li:hover {
   margin-bottom: 3%;
   box-shadow: 0 0 10px #c0c0c0;
   padding: 3%;
+}
+
+.about-me-div > div {
+  margin-bottom: 1em;
+  max-width: 90%;
 }
 
 .label {
