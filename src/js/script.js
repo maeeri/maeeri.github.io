@@ -40,7 +40,6 @@ async function setData() {
   const username = "maeeri"
   const apiUrl = `https://api.github.com/users/${username}/repos`
   let repos = (await fetchJsonData(apiUrl))
-  let test = (await fetchJsonData(repos[0].url + '/readme', options))
   repos
     .sort((a, b) => b.language - a.language)
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))

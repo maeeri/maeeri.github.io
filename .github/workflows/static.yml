@@ -34,7 +34,7 @@ jobs:
         uses: jamestrousdale/github-app-jwt-token@0.1.4
         with:
           app-id: ${{ secrets.APP_ID }}
-          app-installation-repo: 'maeeri/maeeri.github.io'
+          app-installation-repo: 'maeeri.github.io'
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Set environment from action output
         run: |
