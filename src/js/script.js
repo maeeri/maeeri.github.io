@@ -1,7 +1,7 @@
 const options = {
   method: 'GET',
   headers: {
-    'Authorization': `Bearer ${process.env.GITHUB_APP_JWT}`,
+    //'Authorization': 'Bearer ${{ secrets.GITHUB_APP_JWT }}',
     'Accept': 'application/vnd.github.html+json'
   }
 }
@@ -47,17 +47,9 @@ async function setData() {
   
   let reposlist = document.getElementById('reposlist')
   for (let i = 0; i < repos.length; i++) {
-    let modalBody = createRepoModalBody(repos[i])
-    let screenName = changeRepoName(repos[i].name)
     let readme = await fetchJsonData(repos[i].url + '/readme', {headers: {'Accept': 'application/vnd.github.html+json'}})
-    if (readme && readme.content) {
-      let readmeDiv = document.createElement('div')
-      readmeDiv.appendChild(atob(readme.content))
-      modalBody.appendChild(document.createElement('hr'))
-      let readmeLabel = createLabel('README.md')
-      readmeDiv.prepend(readmeLabel)
-      modalBody.appendChild(readmeDiv)
-    }
+    let modalBody = createRepoModalBody(repos[i], readme)
+    let screenName = changeRepoName(repos[i].name)
     let li = createRepoListElement(repos[i].language ? repos[i].language : 'N/A',
       new Date(repos[i].created_at).toLocaleDateString(),
       screenName)
@@ -141,7 +133,7 @@ createWorkModalBody = function (work) {
   return div
 }
 
-function createRepoModalBody(repo) {
+function createRepoModalBody(repo, readme) {
   let div = document.createElement('div')
   let description = createElement('Description: ', repo.description ? repo.description : 'N/A')
   div.appendChild(description)
@@ -162,6 +154,15 @@ function createRepoModalBody(repo) {
   linkDiv.appendChild(linkLabel)
   linkDiv.appendChild(link)
   div.appendChild(linkDiv)
+  if (readme && readme.content) {
+    console.log(readme.constent)
+    // let readmeDiv = document.createElement('div')
+    // readmeDiv.appendChild(atob(readme.content))
+    // modalBody.appendChild(document.createElement('hr'))
+    // let readmeLabel = createLabel('README.md')
+    // readmeDiv.prepend(readmeLabel)
+    // modalBody.appendChild(readmeDiv)
+  }
   return div
 }
 
