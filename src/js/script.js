@@ -1,3 +1,11 @@
+const options = {
+  method: 'GET',
+  headers: {
+    'Authorization': `Bearer ${process.env.GITHUB_APP_JWT}`,
+    'Accept': 'application/vnd.github.html+json'
+  }
+}
+
 async function fetchJsonData(url) {
   const res = await fetch(url)
   data = await res.json()
@@ -32,9 +40,7 @@ async function setData() {
   const username = "maeeri"
   const apiUrl = `https://api.github.com/users/${username}/repos`
   let repos = (await fetchJsonData(apiUrl))
-  console.log(repos)
-  let test = (await fetchJsonData(repos[0].url + '/readme', {headers: {'Accept': 'application/vnd.github.html+json'}}))
-  console.log(atob(test.content))
+  let test = (await fetchJsonData(repos[0].url + '/readme', options))
   repos
     .sort((a, b) => b.language - a.language)
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
