@@ -15,7 +15,7 @@ async function setData() {
     let modalBody = createStudyModalBody(studies[i])
     let title = studies[i].school ? studies[i].school + ": " + studies[i].course : studies[i].course
     let li = createListElement(title, studies[i].school, modalBody)
-    li = addModalTrigger(li, studies[i].school, modalBody)
+    li = addModalTrigger(li, studies[i].course, modalBody)
     studieslist.appendChild(li)
   }
 
@@ -25,13 +25,16 @@ async function setData() {
   for (let i = 0; i < work.length; i++) {
     let modalBody = createWorkModalBody(work[i])
     let li = createListElement(work[i].company + ': ' + work[i].title)
-    li = addModalTrigger(li, work[i].company, modalBody)
+    li = addModalTrigger(li, work[i].title, modalBody)
     worklist.appendChild(li)
   }
 
   const username = "maeeri"
   const apiUrl = `https://api.github.com/users/${username}/repos`
   let repos = (await fetchJsonData(apiUrl))
+  console.log(repos)
+  let test = (await fetchJsonData(repos[0].url + '/readme', {headers: {'Accept': 'application/vnd.github.html+json'}}))
+  console.log(atob(test.content))
   repos
     .sort((a, b) => b.language - a.language)
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
@@ -40,7 +43,15 @@ async function setData() {
   for (let i = 0; i < repos.length; i++) {
     let modalBody = createRepoModalBody(repos[i])
     let screenName = changeRepoName(repos[i].name)
-    
+    let readme = await fetchJsonData(repos[i].url + '/readme', {headers: {'Accept': 'application/vnd.github.html+json'}})
+    if (readme && readme.content) {
+      let readmeDiv = document.createElement('div')
+      readmeDiv.appendChild(atob(readme.content))
+      modalBody.appendChild(document.createElement('hr'))
+      let readmeLabel = createLabel('README.md')
+      readmeDiv.prepend(readmeLabel)
+      modalBody.appendChild(readmeDiv)
+    }
     let li = createRepoListElement(repos[i].language ? repos[i].language : 'N/A',
       new Date(repos[i].created_at).toLocaleDateString(),
       screenName)

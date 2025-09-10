@@ -4,7 +4,7 @@
 
 .main {
   width: 100vw;
-  background-color: rgb(54, 54, 54);
+  background-color: #D5F9DE;
 }
 
 .box {
@@ -13,22 +13,24 @@
 }
 
 .appbar {
-  background-color: #3e2244;
+  background-color: #0b132b;
   color: white;
 }
 
 .custom-container {
-  background-color: white;
+  background-color: D5F9DE;
   height: 100%;
 }
 
 .profile-pic {
-  height: auto;
-  max-width: 500px;
+  padding: 0%;
+  border-radius: 15%;
+  margin: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
 }
 
 li:hover {
-  background-color: lightgrey;
+  background-color: 8FA6CB;
   cursor: pointer;
 }
 
@@ -37,10 +39,11 @@ li:hover {
 }
 
 .custom-card {
-  margin: 1%;
+  margin: 1em auto;
   margin-bottom: 3%;
   box-shadow: 0 0 10px #c0c0c0;
   padding: 3%;
+  border-radius: 30px;
 }
 
 .about-me-div > div {
@@ -50,6 +53,11 @@ li:hover {
 
 .label {
   font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {
