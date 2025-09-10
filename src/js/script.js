@@ -1,7 +1,7 @@
 const options = {
   method: 'GET',
   headers: {
-    'Authorization': `Bearer ${process.env.GITHUB_APP_JWT}`,
+    //'Authorization': 'Bearer ${{ secrets.GITHUB_APP_JWT }}',
     'Accept': 'application/vnd.github.html+json'
   }
 }
