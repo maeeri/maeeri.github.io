@@ -1,0 +1,46 @@
+[
+	{
+	"id": 0,
+	"school": "Lapland University of Applied Sciences",
+	"course": "Bachelor of Engineering",
+	"ECTS": 170,
+	"begin": "1.9.2023",
+	"end": null
+	},{
+	"id": 1,
+	"school": "AW Academy",
+	"course": "C# Full Stack Developer",
+	"ECTS": null,
+	"begin": "1.5.2022",
+	"end": "2.9.2022"
+	},{
+	"id": 2,
+	"school": "Helsinki University",
+	"course": "Full Stack Open",
+	"ECTS": 11,
+	"begin": null,
+	"end": "1.3.2023"
+	},{
+	"id": 3,
+	"school": "Helsinki University",
+	"course": "Data Structures and Algorithms",
+	"ECTS": 10,
+	"begin": null,
+	"end": "1.3.2023"
+	},{
+	"id": 4,
+	"school": "University of Tampere",
+	"course": "Bachelor of Arts, English language and Culture",
+	"ECTS": 180,
+	"begin": null,
+	"end": "31.1.2019"
+	},{
+	"id": 5,
+	"school": null,
+	"course": "Tim Corey C# Mastercourse",
+	"ECTS": null,
+	"begin": null,
+	"end": "30.12.2024",
+	"website": "https://www.iamtimcorey.com/courses/csharp-mastercourse/"
+	}
+]

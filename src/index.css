@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #b9aef7;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app-bar {
+  background-color: blueviolet;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+}
+
+.me-image {
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 12%;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 }
