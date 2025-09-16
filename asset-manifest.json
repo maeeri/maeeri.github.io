@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/maeeri.github.io/my-portfolio/static/css/main.40d89a68.css",
+    "main.js": "/maeeri.github.io/my-portfolio/static/js/main.c0e90fd4.js",
+    "index.html": "/maeeri.github.io/my-portfolio/index.html",
+    "main.40d89a68.css.map": "/maeeri.github.io/my-portfolio/static/css/main.40d89a68.css.map",
+    "main.c0e90fd4.js.map": "/maeeri.github.io/my-portfolio/static/js/main.c0e90fd4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40d89a68.css",
+    "static/js/main.c0e90fd4.js"
+  ]
+}
