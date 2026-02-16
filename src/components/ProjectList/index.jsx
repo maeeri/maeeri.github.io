@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Accordion } from "react-bootstrap";
+import { Accordion, Container } from "react-bootstrap";
 import ProjectItem from "./ProjectItem";
 
 const ProjectList = () => {
@@ -16,20 +16,22 @@ const ProjectList = () => {
   if (projects.length === 0) {
     return <p>Loading projects...</p>;
   }
-  
+
   return (
-    <Accordion>
-      {
-        projects.map((project) => (
-          <Accordion.Item eventKey={project.id} key={project.id} className="mb-3">
-            <Accordion.Header>{project.language}: {project.name}</Accordion.Header>
-            <Accordion.Body>
-              <ProjectItem item={project} />
-              </Accordion.Body>
-          </Accordion.Item>
-        ))
-      }
-    </Accordion>
+    <Container className="mt-4">
+      <Accordion>
+        {
+          projects.map((project) => (
+            <Accordion.Item eventKey={project.id} key={project.id} className="mb-3">
+              <Accordion.Header>{project.language}: {project.name}</Accordion.Header>
+              <Accordion.Body>
+                <ProjectItem item={project} />
+                </Accordion.Body>
+            </Accordion.Item>
+          ))
+        }
+      </Accordion>
+    </Container>
   );
 }
 

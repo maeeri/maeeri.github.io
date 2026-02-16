@@ -12,7 +12,7 @@ const Home = () => {
           <Row style={{ marginTop: "2em" }}>
             <Col md="auto">
               I'm a software developer with a passion for learning and creating software for actual use.
-              Explore my work experience and studies to learn a bit more about my background and skills.
+              Explore my work experience, hobby projects and studies to learn a bit more about my background and skills.
             </Col>
           </Row>
           <Row>

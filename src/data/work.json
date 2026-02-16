@@ -39,5 +39,21 @@
 			"Node.js",
 			"React.js"
 		]
+	},{ 
+		"id": 2,
+		"company": "YMCA Tampere",
+		"begin": "19.1.2019",
+		"end": "30.6.2022",
+		"title": "Youth Councelor",
+		"description": "I worked as a social youth worker. My duties included group activities, individual support, and organizing events as well as liaising with various other organizations.",
+		"tech": []
+	},{ 
+		"id": 3,
+		"company": "Staffpoint Oy",
+		"begin": "1.9.2014",
+		"end": "6.1.2016",
+		"title": "Customer Service Agent",
+		"description": "I worked as a customer service agent at a taxi center.",
+		"tech": []
 	}
 ]

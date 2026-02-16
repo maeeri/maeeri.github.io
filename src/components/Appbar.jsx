@@ -10,9 +10,9 @@ function Appbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto app-bar">
-            <Nav.Link className="app-bar" href="/work">Work Experience</Nav.Link>
-            <Nav.Link className="app-bar" href="/studies">Studies</Nav.Link>
-            <Nav.Link className="app-bar" href="/projects">Projects</Nav.Link>
+            <Nav.Link className="app-bar" href="/#/work">Work Experience</Nav.Link>
+            <Nav.Link className="app-bar" href="/#/studies">Studies</Nav.Link>
+            <Nav.Link className="app-bar" href="/#/projects">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

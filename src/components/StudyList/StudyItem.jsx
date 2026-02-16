@@ -19,7 +19,10 @@ const StudyItem = ({ item }) => {
           </ListGroup.Item> }
           { duration && <ListGroup.Item key={item.id} className="mb-3">
             {duration}
-          </ListGroup.Item> }
+          </ListGroup.Item>}
+          {item.website && <ListGroup.Item key={item.id} className="mb-3">
+            <Card.Link href={item.website} target="_blank" rel="noopener noreferrer">{ item.website }</Card.Link>
+          </ListGroup.Item>}
         </ListGroup>
       </Card.Body>
     </Card>
