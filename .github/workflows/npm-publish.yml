@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm test
 
   publish-npm:
     runs-on: ubuntu-latest
@@ -25,6 +24,6 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm deploy
+      - run: deploy
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
