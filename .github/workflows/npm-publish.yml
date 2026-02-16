@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
+      - run: npm i gh-pages
 
   publish-npm:
     runs-on: ubuntu-latest
